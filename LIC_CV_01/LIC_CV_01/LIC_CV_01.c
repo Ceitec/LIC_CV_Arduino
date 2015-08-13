@@ -142,12 +142,12 @@ int main(void)
     while (1)
     {
 		_delay_ms(1000);
-		sprintf(Vystup, "%.8X", rc522_read_card_id(curr_id, &card_tipe));
-		RS232_Transmit_String_CRLF(Vystup);
+		/*sprintf(Vystup, "%.8X", rc522_read_card_id(curr_id, &card_tipe));
+		RS232_Transmit_String_CRLF(Vystup);*/
 		
 			
 	    // read id card
-	    /*if (rc522_read_card_id(curr_id, &card_tipe))
+	    if (rc522_read_card_id(curr_id, &card_tipe))
 	    {
 		    sprintf(Vystup, "%.2X%.2X%.2X%.2X%.2X-%.4X\n\r", curr_id[0], curr_id[1], curr_id[2], curr_id[3], curr_id[4], card_tipe);
 		    RS232_Transmit_String(Vystup);
@@ -188,7 +188,7 @@ int main(void)
 	    }
 	    
 	    //halt the card
-	    mfrc522_halt();*/
+	    mfrc522_halt();
 	    
 	    //delay
 	    _delay_ms(100);
